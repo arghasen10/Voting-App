@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "206954656619",
+    "firebase_url": "https://votingapp-9b3ad.firebaseio.com",
+    "project_id": "votingapp-9b3ad",
+    "storage_bucket": "votingapp-9b3ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206954656619:android:e71224864b21b540",
+        "android_client_info": {
+          "package_name": "com.logui.arghasen.votingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206954656619-sfv9kqb9d9qp5dp1gg89aipq0r89eoh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.logui.arghasen.votingapp",
+            "certificate_hash": "e58b6b344754809450b5d9e11165bbab693c5c56"
+          }
+        },
+        {
+          "client_id": "206954656619-s5h9djtc9la075ppbh20u5gsu45o42ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHbx53uz1R7rb9NRR0YnrqFRWjEmJ6Y3Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206954656619-s5h9djtc9la075ppbh20u5gsu45o42ue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
