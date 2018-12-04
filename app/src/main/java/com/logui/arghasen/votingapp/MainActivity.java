@@ -14,10 +14,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
     EditText edittextemail,edittextpassword;
     ProgressBar progressBar;
     @Override
@@ -31,10 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth =FirebaseAuth.getInstance();
         edittextemail = (EditText) findViewById(R.id.edittextemail);
         edittextpassword = (EditText)findViewById(R.id.edittextpassword);
+
+
     }
+
     private void loginuser(){
-        String username = edittextemail.getText().toString().trim();
-        String password = edittextpassword.getText().toString().trim();
+        final String username = edittextemail.getText().toString().trim();
+        final String password = edittextpassword.getText().toString().trim();
         if(username.isEmpty()){
             edittextemail.setError("Username is required");
             edittextemail.requestFocus();
@@ -60,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    myRef.setValue(username);
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(MainActivity.this, vote.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
