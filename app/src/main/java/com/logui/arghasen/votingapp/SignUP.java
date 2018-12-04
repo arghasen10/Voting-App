@@ -61,9 +61,7 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(SignUP.this, vote.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(),"You are successfully registered. Go to login",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if(task.getException() instanceof FirebaseAuthUserCollisionException){
@@ -85,5 +83,10 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
             case R.id.buttonSignUP:
                 registerUser();
         }
+    }
+    @Override
+    public void onBackPressed() {
+
+        return;
     }
 }

@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUP" />
-        <activity android:name=".vote"></activity>
+        <activity android:name=".vote" />
+        <activity android:name=".logout"></activity>
     </application>
 
 </manifest>

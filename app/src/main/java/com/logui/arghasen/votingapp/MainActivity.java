@@ -20,15 +20,19 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    //FirebaseDatabase database = FirebaseDatabase.getInstance();
+    //DatabaseReference myRef = database.getReference("User");
+    public String username;
     EditText edittextemail,edittextpassword;
     ProgressBar progressBar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         findViewById(R.id.signuptextview).setOnClickListener(this);
         findViewById(R.id.buttonLogin).setOnClickListener(this);
         progressBar = (ProgressBar) findViewById(R.id.Progressbar);
@@ -40,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loginuser(){
-        final String username = edittextemail.getText().toString().trim();
-        final String password = edittextpassword.getText().toString().trim();
+        username = edittextemail.getText().toString().trim();
+        String password = edittextpassword.getText().toString().trim();
         if(username.isEmpty()){
             edittextemail.setError("Username is required");
             edittextemail.requestFocus();
@@ -67,11 +71,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    myRef.setValue(username);
+
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent(MainActivity.this, vote.class);
+                    intent.putExtra("UserName", username);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
+                    //vote object = new vote();
+                    //int option = object.option;
+                    //String id = myRef.push().getKey();
+                    //user newuser = new user(id,username,option);
+                    //myRef.child(id).setValue(newuser);
                 }
                 else {
                     Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
@@ -89,5 +99,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 loginuser();
         }
 
+    }
+    @Override
+    public void onBackPressed() {
+
+        return;
     }
 }
