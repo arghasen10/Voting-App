@@ -11,9 +11,9 @@ https://github.com/arghasen10/Voting-App/blob/AdminServer/serverAdmin.py
 ## App ScreenShot
 
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Signup.png   "SignUP" align="left") ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/login.png   "Login" align = "right")
+### SignUP! [Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Signup.png   "SignUP" ) ### Login ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/login.png   "Login" )
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/SelectOption.png   "Select Option" align = "left") ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Logout.png   "Logout" align = "right")
+### Select Option ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/SelectOption.png   "Select Option" ) ### Logout ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Logout.png   "Logout" align = "right")
 
 
 
