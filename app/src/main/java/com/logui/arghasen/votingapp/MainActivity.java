@@ -14,14 +14,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    //FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //DatabaseReference myRef = database.getReference("User");
     public String username;
     EditText edittextemail,edittextpassword;
     ProgressBar progressBar;
@@ -77,11 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     intent.putExtra("UserName", username);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    //vote object = new vote();
-                    //int option = object.option;
-                    //String id = myRef.push().getKey();
-                    //user newuser = new user(id,username,option);
-                    //myRef.child(id).setValue(newuser);
                 }
                 else {
                     Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();

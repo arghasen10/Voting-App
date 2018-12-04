@@ -1,21 +1,15 @@
 package com.logui.arghasen.votingapp;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class vote extends AppCompatActivity implements View.OnClickListener{
     public int option;
+    public int flag =0;
     public String username;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("User");
@@ -33,11 +27,12 @@ public class vote extends AppCompatActivity implements View.OnClickListener{
         username = extras.getString("UserName");
 
 
+
     }
     private void databasesend(){
         String id = myRef.push().getKey();
         user newuser = new user(username,option);
-        myRef.child(username).setValue(newuser);
+        myRef.child(id).setValue(newuser);
         Intent intent = new Intent(vote.this,logout.class);
         startActivity(intent);
 
