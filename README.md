@@ -9,18 +9,12 @@ Download the apk in your mobile and install it.
 https://github.com/arghasen10/Voting-App/blob/AdminServer/serverAdmin.py
 
 ## App ScreenShot
-### SignUP Page-
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Signup.png   "App Screenshot")
 
-### Login Page-
+![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Signup.png   "SignUP") ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/login.png   "Login")
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/login.png   "App Screenshot")
+![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/SelectOption.png   "Select Option") ![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Logout.png   "Logout")
 
-### Select Option Page-
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/SelectOption.png   "App Screenshot")
 
-### LogOUT Page-
 
-![Alt text](https://github.com/arghasen10/Voting-App/blob/AdminServer/Logout.png   "App Screenshot")
